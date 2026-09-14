@@ -1,4 +1,4 @@
-# minecraft-fun — how to connect to Minecraft, and proposed design
+# minecraft_fun — how to connect to Minecraft, and proposed design
 
 ## TL;DR
 
