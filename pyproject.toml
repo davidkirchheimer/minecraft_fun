@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minecraft-fun"
+version = "0.1.0"
+description = "Build structures in Minecraft from Python, live or in save files"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+rcon = ["mcrcon>=0.7.0"]
+gdmc = ["gdpc>=8.1.0"]
+anvil = ["amulet-core>=1.9.45"]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+
+[project.scripts]
+mcfun = "minecraft_fun.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["minecraft_fun*"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
